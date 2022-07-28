@@ -1,5 +1,5 @@
 {
-  "name": "fhir-react",
+  "name": "@qured-team/fhir-react",
   "version": "0.3.15",
   "description": "React component library for displaying FHIR Resources ",
   "main": "build/index.js",
@@ -36,13 +36,10 @@
     "deploy-storybook-branch": "storybook-to-aws-s3 --aws-profile=storybook-deployer",
     "deploy-storybook-pr-branch": "storybook-to-aws-s3 --bucket-path=fhir-react-lib-test-storybook/branch/$(git branch --show-current) --aws-profile=1up-marketing-dev-admin"
   },
-  "author": {
-    "name": "1upHealth",
-    "email": "tech@querd.com"
-  },
+  "author": "1upHealth",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qured-team/fhir-react"
+    "url": "git+https://github.com/qured-team/fhir-react.git"
   },
   "bugs": {
     "url": "https://github.com/qured-team/fhir-react/issues"

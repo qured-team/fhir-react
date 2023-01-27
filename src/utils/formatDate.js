@@ -19,7 +19,7 @@ const whichOptions = date => {
   }
   return {
     day: '2-digit',
-    month: '2-digit',
+    month: 'long',
     year: 'numeric',
     timeZone: 'UTC',
   };

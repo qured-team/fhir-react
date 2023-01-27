@@ -1,9 +1,9 @@
-export const formatDate = (date, locale) => {
+export const formatDate = (date, locale, includeMinutes) => {
   const rawDate = new Date(date);
-  return rawDate.toLocaleDateString(locale, whichOptions(date));
+  return rawDate.toLocaleDateString(locale, whichOptions(date, includeMinutes));
 };
 
-const whichOptions = date => {
+const whichOptions = (date, includeMinutes) => {
   const YEAR_FORMAT = 'YYYY';
   const YEAR_MONTH_FORMAT = 'YYYY-MM';
 
@@ -17,6 +17,17 @@ const whichOptions = date => {
       timeZone: 'UTC',
     };
   }
+  if (includeMinutes) {
+    return {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: 'UTC',
+    };
+  }
+
   return {
     day: '2-digit',
     month: 'long',

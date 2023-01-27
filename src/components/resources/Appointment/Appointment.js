@@ -218,7 +218,7 @@ const Appointment = ({
             additionalContent={
               start && (
                 <Value label="Start date" data-testid="headerStartDate">
-                  <Date fhirData={start} isBlack />
+                  <Date fhirData={start} isBlack includeMinutes />
                 </Value>
               )
             }

@@ -1,12 +1,18 @@
 import React from 'react';
 import { formatDate } from '../../../utils/formatDate';
 
-const Date = ({ fhirData, isBlack, testId, className = '' }) => {
+const Date = ({
+  fhirData,
+  isBlack,
+  testId,
+  includeMinutes,
+  className = '',
+}) => {
   if (!fhirData) {
     return null;
   }
   const locale = 'en-US';
-  const dateValue = formatDate(String(fhirData), locale);
+  const dateValue = formatDate(String(fhirData), locale, includeMinutes);
 
   return (
     <span
